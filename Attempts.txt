@@ -1,0 +1,41 @@
+The following commands were attempted to open firefox on specific displays. None have worked, mostly because specific software or plugins are not installed.
+
+firefox --display:=0 &
+
+firefox --display:=1 &
+
+firefox -new-window http://www.cyberciti.biz/
+
+firefox -new-window http://www.cyberciti.biz/ -fullscreen
+
+firefox -new-window http://www.cyberciti.biz/ --fullscreen
+
+firefox -P "Fullscreen" -no-remote --display=0
+
+firefox -P "Fullscreen" -no-remote --display=1
+
+firefox -P "Fullscreen" -no-remote --display=0.0
+
+DISPLAY=:0 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:1 firefox -P "Fullscreen" -no-remote
+
+DISPLAY:=2 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:0.0 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:0.1 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:DVI-D-0 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:HDMI-0 firefox -P "Fullscreen" -no-remote
+
+DISPLAY=:HDMI-0 firefox -P "Fullscreen" -no-remote --geometry 600x400+1920
+
+firefox -P "Fullscreen" -no-remote --geometry 600x400+1920
+
+firefox -P "Fullscreen" -no-remote -e 0,19200,0,1200,1600
+
+kstart --desktop 1 firefox -P "Fullscreen" -no-remote
+
+kstart --desktop 2 firefox -P "Fullscreen" -no-remote

@@ -2,7 +2,15 @@
 
 This is the set of scripts used for the LIP-CMS Control Room at IST.
 
-## Setup
+## Setup repository
+
+From the Documents directory run the commands:
+
+git
+
+git checkout -b [branch] [remotename]/[branch]
+
+## Setup Firefox
 
 Create a firefox profile with: firefox -ProfileManager -no-remote
 

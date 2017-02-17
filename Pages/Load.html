@@ -1,0 +1,26 @@
+ <!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>LIP-CMS Loading Page</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+
+<script type="text/javascript">
+  var windowObjectReference;
+  var strWindowFeatures = "toolbar=no,menubar=no,location=no,resizable=no,scrollbars=no,status=no";
+
+  function openRequestedPopup()
+  {
+    windowObjectReference = window.open("LHCStatus.html", "LHC Status", strWindowFeatures.concat(",left=0,top=0,outerHeight=800,outerWidth=1280"));
+    windowObjectReference = window.open("CMSStatus.html", "CMS Status", strWindowFeatures.concat(",left=1280,top=0,outerHeight=800,outerWidth=1280"));
+    //window.close();
+    //window.open('','_self').close();
+    //window.open('','_parent','');
+    //window.close();
+  }
+</script>
+</head>
+<body onload='openRequestedPopup()'>
+</body>
+</html>

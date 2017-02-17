@@ -1,0 +1,5 @@
+Interesting or Useful commands:
+
+firefox -width 5772 -height 2160
+
+xrandr

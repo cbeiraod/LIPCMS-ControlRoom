@@ -1,0 +1,15 @@
+Center: Live Events      - http://cmsdoc.cern.ch/B40tvs/live_event.html
+        Events (2009) -
+http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=6&frames=no
+        Events (2010-2011) -
+http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=7&frames=no
+        Events (Simulations) -
+http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=8&frames=no
+
+Leftmost: LHC Status -
+LHCStatus.html
+Left Center: CMS Status -
+CMSStatus.html
+Right Center: DAQ -
+http://cmsdoc.cern.ch/B40tvs/cms_daq.html
+Rightmost:

@@ -12,12 +12,7 @@
 
   function openRequestedPopup()
   {
-    windowObjectReference = window.open("LHCStatus.html", "LHC Status", strWindowFeatures.concat(",left=0,top=0,outerHeight=800,outerWidth=1280"));
-    windowObjectReference = window.open("CMSStatus.html", "CMS Status", strWindowFeatures.concat(",left=1280,top=0,outerHeight=800,outerWidth=1280"));
-    //window.close();
-    //window.open('','_self').close();
-    //window.open('','_parent','');
-    //window.close();
+    windowObjectReference = window.open("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=8&frames=no", "Simulation Events", strWindowFeatures.concat(",left=0,top=0,outerHeight=1600,outerWidth=3000"));
   }
 </script>
 </head>

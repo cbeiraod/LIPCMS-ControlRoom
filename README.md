@@ -8,7 +8,7 @@ From the Documents directory run the commands:
 
 git
 
-git checkout -b [branch] [remotename]/[branch]
+git checkout --track origin/serverfix
 
 ## Setup Firefox
 

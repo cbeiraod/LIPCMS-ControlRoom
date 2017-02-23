@@ -6,3 +6,5 @@ xrandr
 
 wmctrl -d
 (other options too)
+
+git checkout -b [branch] [remotename]/[branch]

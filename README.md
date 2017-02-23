@@ -6,9 +6,9 @@ This is the set of scripts used for the LIP-CMS Control Room at IST.
 
 From the Documents directory run the commands:
 
-git
+git clone https://github.com/cbeiraod/LIPCMS-ControlRoom.git
 
-git checkout --track origin/serverfix
+git checkout --track origin/[yourBranch]
 
 ## Setup Firefox
 

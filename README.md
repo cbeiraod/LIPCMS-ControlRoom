@@ -8,7 +8,7 @@ From the Documents directory run the commands:
 
 git clone https://github.com/cbeiraod/LIPCMS-ControlRoom.git
 
-git checkout --track origin/[yourBranch]
+git checkout --track origin/auger-lidar
 
 ## Setup Firefox
 

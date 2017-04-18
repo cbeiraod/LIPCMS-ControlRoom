@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>LIP Video PLayer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+<style>
+  body
+  {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  img
+  {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100vh;
+    max-width: 100vw;
+  }
+</style>
+
+<script type='text/javascript'>
+// Correct way to do classes in javascript: http://stackoverflow.com/questions/3641229/class-variable-in-javascript
+var createVideo = function(videoStr, soundOption){
+    return {
+        video: videoStr,
+        sound: soundOption
+    }
+}
+
+var videos = [
+  createVideo("Preparing.mp4",false),
+  createVideo("Opening.mp4",false),
+  createVideo("CMSMoving.mp4",false),
+  createVideo("MuonInstallation.mp4",false),
+  createVideo("BeampipeExtraction.mp4",false),
+  createVideo("BeampipeInstallation.mp4",false),
+  createVideo("ECALEndcaps.mp4",false),
+  createVideo("EndcapYE.mp4",false),
+  createVideo("ECALCrystal.mp4",false),
+  createVideo("PixelInsertion.mp4",false),
+  createVideo("HiggsZZCandidate.mp4",false),
+  createVideo("Collision13TeV.mp4",false),
+];
+var video_count = -1;
+var videoPlayer = document.getElementById("video");
+
+
+// http://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+function shuffle(array)
+{
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+// Shuffle the video order
+videos = shuffle(videos);
+
+
+function fileExists(url)
+{
+    if(url){
+        var req = new XMLHttpRequest();
+        req.open('HEAD', url, false);
+        req.send();
+        return req.status!=404;
+    } else {
+        return false;
+    }
+};
+
+function myErrorFunction()
+{
+  // If this is called, there was a problem with one of the files,
+  //most likely, we tried opening a video file that does not exist.
+  // Just call the run function again and move to the next video.
+  //alert("There was a problem");
+  runNextVideo()
+};
+
+function runNextVideo()
+{
+  video_count++;
+  if (video_count >= videos.length)
+  {
+    location.reload(); // Reload the page once finished playing, like this, the videos are reshuffled
+    //video_count = 0;
+  }
+  var nextVideo = videos[video_count];
+
+  videoPlayer.src = nextVideo.video;
+  if(nextVideo.sound)
+    videoPlayer.muted = false;
+  else
+    videoPlayer.muted = true;
+  videoPlayer.play();
+};
+</script>
+
+</head>
+<body>
+
+<video id='video' width='100%' autoplay onended="runNextVideo()" onerror="myErrorFunction()">
+  <source src="" type="video/mp4">
+Video tag not supported
+</video>
+
+<script type='text/javascript'>
+videoPlayer = document.getElementById("video");
+videoPlayer.onloadstart = function()
+{
+  //alert("Starting to load video");
+  if(video_count == -1)
+  {
+    video_count = 0;
+    var nextVideo = videos[video_count];
+
+    videoPlayer.src = nextVideo.video;
+    if(nextVideo.sound)
+      videoPlayer.muted = false;
+    else
+      videoPlayer.muted = true;
+    videoPlayer.play();
+  }
+};
+</script>
+
+</body>
+</html>

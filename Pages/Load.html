@@ -10,10 +10,67 @@
   var windowObjectReference;
   var strWindowFeatures = "toolbar=no,menubar=no,location=no,resizable=no,scrollbars=no,status=no";
 
+  var createPage = function(pageURL, pageName)
+  {
+    return {
+        URL: pageURL,
+        name: pageName
+    }
+  }
+
+  var createScreen = function(screenLeft, screenTop, screenHeight, screenWidth)
+  {
+    return {
+      left: screenLeft,
+      top: screenTop,
+      height: screenHeight,
+      width: screenWidth,
+      winRef: null
+    }
+  }
+
+  var allVisiblePages = {
+    topLeft: createPage("LHCStatus.html", "LHC Page 1"),
+    topCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/PageZero", "CMS Page Zero"),
+    topRight: createPage("CMSStatus.html", "CMS Page 1"),
+    midLeft: createPage("https://cmswbm.cern.ch/cmsdb/servlet/LHCStatusDisplay", "LHC Status"),
+    midCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/MagnetHistory", "Magnet History"),
+    midRight: createPage("http://cmsdoc.cern.ch/B40tvs/cms_daq.html", "CMS DAQ"),
+    bottomLeft: createPage("https://cmsweb.cern.ch/dqm/online", "DQM Online"),
+    bottomLeftCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/FillSummary", "Runtime Summary"),
+    bottomRightCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/HLTriggerRates", "HLT Rates"),
+    bottomRight: createPage("https://cmswbm.cern.ch/cmsdb/servlet/FillReport? N=1&BYLASTFILLS=TRUE&STABLE=TRUE", "Latest stable Fill"),
+  }
+
+  var allScreens = [
+    createScreen(0, 0, 800, 1280),
+    createScreen(1280, 0, 800, 1280),
+  ]
+
+  var chosenPages = [
+    allVisiblePages.topLeft,
+    allVisiblePages.topRight
+  ]
+
   function openRequestedPopup()
   {
-    windowObjectReference = window.open("LHCStatus.html", "LHC Status", strWindowFeatures.concat(",left=0,top=0,outerHeight=1080,outerWidth=1920"));
-    windowObjectReference = window.open("CMSStatus.html", "CMS Status", strWindowFeatures.concat(",left=1920,top=0,outerHeight=1080,outerWidth=1920"));
+    for(i = 0; i < allScreens.length; i++)
+    {
+      var windowFeatures = strWindowFeatures;
+      windowFeatures += ",left="+allScreens[i].left.toString();
+      windowFeatures += ",top="+allScreens[i].top.toString();
+      windowFeatures += ",outerHeight="+allScreens[i].height.toString();
+      windowFeatures += ",outerWidth="+allScreens[i].width.toString();
+      allScreens[i].winRef = window.open(chosenPages[i].URL, chosenPages[i].name, windowFeatures);
+    }
+
+    // https://cmswbm.cern.ch/cmsdb/servlet/FillSummary
+    // https://cmswbm.cern.ch/cmsdb/servlet/FillSummary?nameExp=^LHCFILL&showLumi=1
+
+    //window.close();
+    //window.open('','_self').close();
+    //window.open('','_parent','');
+    //window.close();
   }
 </script>
 </head>

@@ -1,12 +1,12 @@
 # Intro
 
-This is the set of scripts used for the LIP-CMS Control Room at IST.
+This is the set of scripts used for the LIP-CMS Operation Center at IST.
 
 ## Setup repository
 
 From the Documents directory run the commands:
 
-git clone https://github.com/cbeiraod/LIPCMS-ControlRoom.git
+git clone https://github.com/cbeiraod/LIPCMS-OperationCenter.git
 
 git checkout --track origin/auger-fd
 

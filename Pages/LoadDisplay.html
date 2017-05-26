@@ -39,15 +39,15 @@
   // Login: https://account.cern.ch/account/Management/MyAccounts.aspx
   var allVisiblePages = {
     topLeft: allPages.mylhcPage1,
-    topCentre: allPages.cmsPage0,
+    topCentre: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=12&frames=no", "Live Events"),
     topRight: allPages.cmsPage1,
-    midLeft: createPage("https://cmswbm.cern.ch/cmsdb/servlet/LHCStatusDisplay", "LHC Status"),
-    midCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/MagnetHistory", "Magnet History"),
-    midRight: createPage("http://cmsdoc.cern.ch/B40tvs/cms_daq.html", "CMS DAQ"),
+    midLeft: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=6&frames=no", "Events 2009"), // Changed
+    midCentre: createPage("http://cmsdoc.cern.ch/B40tvs/cms_daq.html", "CMS DAQ"), // Changed
+    midRight: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=7&frames=no", "Events 2010-2011"), // Changed
     bottomLeft: createPage("https://cmsweb.cern.ch/dqm/online", "DQM Online"),
-    bottomLeftCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/FillSummary", "Runtime Summary"),
-    bottomRightCentre: createPage("https://cmswbm.cern.ch/cmsdb/servlet/HLTriggerRates", "HLT Rates"),
-    bottomRight: createPage("https://cmswbm.cern.ch/cmsdb/servlet/FillReport? N=1&BYLASTFILLS=TRUE&STABLE=TRUE", "Latest stable Fill"),
+    bottomLeftCentre: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=8&frames=no", "Event Simulations"), // Changed
+    bottomRightCentre: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=9&frames=no", "CMS Photos"), // Changed
+    bottomRight: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=5&frames=no", "Cosmic Muons"), // Changed
   }
 
   var allScreens = [

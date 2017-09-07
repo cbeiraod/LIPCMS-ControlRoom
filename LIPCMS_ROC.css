@@ -1,0 +1,252 @@
+
+:root
+{
+  /* Palette URL: http://paletton.com/#uid=53+0u0k7UUa3cZA5wXlaiQ5cFL3 */
+  --color-primary-0: #BDBDEF;
+  --color-primary-1: #E6E6FC;
+  --color-primary-2: #D2D2F6;
+  --color-primary-3: #A6A6E5;
+  --color-primary-4: #9090D9;
+
+  --color-secondary-1-0: #CFB8EE;
+  --color-secondary-1-1: #EEE4FB;
+  --color-secondary-1-2: #E0CFF6;
+  --color-secondary-1-3: #BDA0E3;
+  --color-secondary-1-4: #AA89D6;
+
+  --color-secondary-2-0: #B5D4EC;
+  --color-secondary-2-1: #E4F1FB;
+  --color-secondary-2-2: #CDE4F5;
+  --color-secondary-2-3: #9DC3E0;
+  --color-secondary-2-4: #84B0D2;
+
+  /*Harmonious greys: https://www.smashingmagazine.com/2016/04/web-developer-guide-color/*/
+  --grey-0: #313136;
+  --grey-1: #505057;
+  --grey-2: #C1C1C8;
+  --grey-3: #D5D5DA;
+  --grey-4: #F0F0F2;
+  --grey-accent: #3f3c42;
+}
+
+body
+{
+  background-color: var(--color-primary-1);
+  color: var(--grey-0);
+}
+
+.rightsidebar
+{
+  float: right;
+  clear: both;
+  width: 22% !important;
+}
+
+.leftsidebar
+{
+  float: left;
+  clear: both;
+}
+
+#content > article
+{
+  overflow: auto;
+  margin-left: 20px;
+  margin-right: 0px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: var(--color-secondary-2-1);
+  border: 1px solid var(--color-secondary-2-4);
+  border-radius: 3px;
+}
+
+.notes
+{
+  background-color: var(--color-secondary-1-1) !important;
+  border: 1px solid var(--color-secondary-1-4) !important;
+}
+
+article > header
+{
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.notes > header
+{
+}
+
+.notes > ul
+{
+  margin: 0px;
+  padding: 0px;
+  margin-left: 10px;
+  margin-right: 5px;
+  list-style-position: inside;
+  text-align: justify;
+}
+
+.notes > ul > li
+{
+  margin-bottom: 8px;
+}
+
+.notes > ul > li > em
+{
+  text-decoration: underline;
+}
+
+.clearfix
+{
+  clear: both;
+}
+
+#title
+{
+  font-size: 3em;
+  color: var(--grey-accent);
+}
+
+#header
+{
+  clear: both;
+  width: 100%;
+  overflow: auto;
+}
+
+#header *
+{
+  display: inline-block;
+}
+
+#header header
+{
+  display: block;
+  overflow: auto;
+  text-align: center;
+}
+
+#header img
+{
+  width: 8%;
+}
+
+#header img:nth-child(odd)
+{
+  float: left;
+  filter: invert(1);
+}
+
+#header img:nth-child(even)
+{
+  float: right;
+}
+
+#content
+{
+  overflow: auto;
+  clear: both;
+  margin: 5px;
+  margin-top: 0px;
+  padding: 10px;
+  padding-left: 0px;
+  padding-right: 20px;
+  /*background-color: var(--grey-4);
+  border: 1px solid var(--color-primary-4);*/
+}
+
+button
+{
+  width: 270px;
+  background-color: var(--color-primary-0);
+  color: var(--grey-0);
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  transition-duration: 0.15s;
+}
+
+button:hover
+{
+  box-shadow: 0 8px 12px 0px var(--color-secondary-2-4);
+}
+
+button:active
+{
+  box-shadow: 0 6px 12px 0px var(--color-secondary-2-4);
+  transform: translateY(3px);
+}
+
+#closeButton
+{
+  width: auto;
+  font-size: 1.2em;
+}
+
+#closeButton:hover
+{
+  box-shadow: 0 8px 12px 0px var(--color-primary-4);
+}
+
+#closeButton:active
+{
+  box-shadow: 0 6px 12px 0px var(--color-primary-4);
+}
+
+#disablingDiv
+{
+  display: none;
+  z-index:1001;
+
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(240,240,242,0.6);
+}
+
+.screenSelector
+{
+  filter: none;
+  background-color: var(--color-primary-1);
+  border: 1px solid var(--color-primary-4);
+  width: 80%;
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  display: block;
+  position: relative;
+  padding: 10px;
+}
+
+.screen
+{
+  display: inline-block;
+  width: 32vh;
+  height: 18vh;
+  margin: 0px 8px;
+  border: 1px solid var(--color-secondary-2-4);
+  background-color: var(--color-secondary-2-2);
+  font-size: 2.5em;
+  font-weight: bold;
+  vertical-align: middle;
+  line-height: 18vh;
+}
+
+.center
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

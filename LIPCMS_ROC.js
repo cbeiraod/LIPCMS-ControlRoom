@@ -15,9 +15,8 @@ var createScreen = function(screenLeft, screenTop, screenHeight, screenWidth)
 }
 
 var allScreens = [
-  createScreen(0,    0, 760, 1024),
-  /*createScreen(0,    0, 1080, 1920),
-  createScreen(1920, 0, 1080, 1920),*/
+  createScreen(0,    0, 1080, 1920),
+  createScreen(1920, 0, 1080, 1920),
 ]
 
 function openWindow(name, url, screen=0)
@@ -275,8 +274,8 @@ var openWindowsOnScreens = function(visiblePages)
   }
 
   var chosenPages = [
-    visiblePages.bottomLeft,
-    visiblePages.bottomLeftCentre,
+    visiblePages.bottomRightCentre,
+    visiblePages.bottomRight,
   ];
 
   for(i = 0; i < allScreens.length; i++)

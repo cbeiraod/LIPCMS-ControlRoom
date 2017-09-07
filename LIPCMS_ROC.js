@@ -1,6 +1,6 @@
 
 
-var strWindowFeatures = "toolbar=no,menubar=no,location=no,resizable=no,scrollbars=no,status=no";
+var strWindowFeatures = "toolbar=no,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
 
 var openWindows = []
 
@@ -83,4 +83,13 @@ if (pageHolder)
 
     pageHolder.appendChild(newButton);
   }
+}
+
+var wikiButton = document.getElementById('wikiButton');
+if (wikiButton)
+{
+  wikiButton.onclick = function()
+  {
+    openWindow("LIP-CMS ROC Wiki", "https://github.com/cbeiraod/LIPCMS-OperationCenter/wiki")
+  };
 }

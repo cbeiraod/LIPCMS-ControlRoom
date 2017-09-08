@@ -1,6 +1,6 @@
 
 
-var strWindowFeatures = "toolbar=no,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
+var strWindowFeatures = "toolbar=yes,menubar=no,location=no,resizable=no,scrollbars=yes,status=no";
 
 var openWindows = []
 

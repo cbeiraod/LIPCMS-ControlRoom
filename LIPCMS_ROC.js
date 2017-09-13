@@ -28,8 +28,16 @@ function openWindow(name, url, screen=0)
   windowFeatures += ",outerWidth="+allScreens[screen].width.toString();
 
   var winRef = window.open(url, name, windowFeatures);
-
   openWindows.push(winRef);
+
+  /*var winRef = window.open("PageDisplay.html", name, windowFeatures);
+  openWindows.push(winRef);
+
+  winRef.onload = function()
+  {
+    var tmp = winRef.document.getElementById('frameDisplay');
+    tmp.src = url;
+  }*/ // Unfortunately does not work for protected pages
 }
 
 var createPage = function(pageURL, pageName, screen=0)
@@ -287,6 +295,7 @@ var openWindowsOnScreens = function(visiblePages)
 var closeButton = document.getElementById('closeButton');
 if (closeButton)
 {
+  window.name = 'parent';
   closeButton.onclick = closeOpenedWindows;
 }
 
@@ -331,4 +340,16 @@ if (shiftButton)
   {
     openWindowsOnScreens(shiftVisiblePages);
   };
+}
+
+var backButton = document.getElementById('backButton');
+if (backButton)
+{
+  backButton.onclick = function()
+  {
+    //window.parent.focus();
+    //window.opener.location.reload(); // works
+    //window.opener.parent.focus();
+    window.open('','parent').focus();
+  }
 }

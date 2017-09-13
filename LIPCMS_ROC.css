@@ -250,3 +250,36 @@ button:active
   margin-right: auto;
   text-align: center;
 }
+
+#frameDisplay
+{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+#backButton
+{
+  width: auto;
+  font-size: 1.2em;
+
+  position: fixed;
+  top: 0%;
+  left: 0%;
+
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+#backButton:hover
+{
+  box-shadow: 0 -8px 12px 0px var(--color-primary-4);
+}
+
+#backButton:active
+{
+  transform: translateY(-3px);
+  box-shadow: 0 -6px 12px 0px var(--color-primary-4);
+}

@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=CMS ROC
+Comment=Open the interface to the LIP-CMS ROC
+Exec=firefox -P "NoRestore" -no-remote index.html
+Type=Application
+#Icon=[path/to/icon-file]

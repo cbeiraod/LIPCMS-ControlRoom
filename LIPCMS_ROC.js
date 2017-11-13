@@ -83,6 +83,7 @@ var allPages = {
   simEvents: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=8&frames=no", "Event Simulations"),
   cosmicMuons: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=5&frames=no", "Cosmic Muons"),
   cmsPhotos: createPage("http://cmsdoc.cern.ch/cmscc/cmstv/cmstv.jsp?channel=9&frames=no", "CMS Photos"),
+  spsPage1: createPage("https://op-webtools.web.cern.ch/vistar/vistars.php?usr=SPS1", "SPS Page 1")
 };
 
 var shiftVisiblePages = {
@@ -105,7 +106,7 @@ var publicVisiblePages = {
   midLeft: allPages.events2009,
   midCentre: allPages.cmsDaq,
   midRight: allPages.events10_11,
-  bottomLeft: allPages.onlineDQM,
+  bottomLeft: allPages.spsPage1,
   bottomLeftCentre: allPages.simEvents,
   bottomRightCentre: allPages.cmsPhotos,
   bottomRight: allPages.cosmicMuons,

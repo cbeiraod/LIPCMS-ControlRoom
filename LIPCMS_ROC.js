@@ -71,6 +71,8 @@ var allPages = {
   cernPhysics: createPage("https://home.cern/about/physics", "Physics"),
   lchIntro: createPage("https://home.cern/topics/large-hadron-collider", "LHC Intro"),
   acceleratorComplex: createPage("https://home.cern/about/accelerators", "Accelerators"),
+  cmsIntro: createPage("https://home.cern/about/experiments/cms", "CMS Intro"),
+  cmsDetector: createPage("https://cms.cern/detector", "CMS Detector"),
   mylhcPage1: createPage("Pages/LHCStatus.html", "LHC Page 1"),
   cmsPage0: createPage("https://cmswbm.cern.ch/cmsdb/servlet/PageZero", "CMS Page Zero"),
   cmsPage1: createPage("http://cmspage1.web.cern.ch/cmspage1/", "CMS Page 1"),
